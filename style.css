@@ -402,9 +402,14 @@ p {
     background-color: #53354a;
 }
 
+.reviews__slider {
+    overflow: hidden;
+}
+
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews__photo {
@@ -446,6 +451,48 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+
+    cursor: pointer;
+    font-size: 0;
+    color: transparent;
+    opacity: 0.5;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+
+.slick-dots .slick-active button {
+    opacity: 1;
 }
 
 
@@ -593,6 +640,23 @@ footer {
 
     .nav {
         display: none;
+        width: 100%;
+        flex-direction: column;
+
+        background-color: #31344e;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 9px 15px;
     }
 
     .burger {
